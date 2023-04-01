@@ -19,7 +19,7 @@ orders as (
         order_approved_at as order_date,
         order_status as status
 
-    from `dbt_shop`.orders
+    from `dbt_shop`.orders_dataset
 
 ),
 

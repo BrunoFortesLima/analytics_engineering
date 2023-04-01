@@ -1,8 +1,9 @@
-CREATE TABLE customers_with_region,
+(CREATE TABLE customers_with_region,
 (region STRING)
 AS
-SELECT dbt_shop 
-FROM shop_conjunto.customers
+SELECT customer_state 
+FROM dbt_shop.customers
 CASE 
-    WHEN dbt_shop.customers IN ('SP', 'RJ') THEN 'Sudeste',
-    WHEN dbt_shop.customers IN ('CE', 'PI', 'MA', 'BA') THEN 'Nordeste';
+    WHEN customers IN ('SP', 'RJ') THEN 'Sudeste',
+    WHEN customers IN ('CE', 'PI', 'MA', 'BA') THEN 'Nordeste'
+)

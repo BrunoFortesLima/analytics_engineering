@@ -1,8 +1,8 @@
 SELECT
   order_id,
   product_id,
-  quantity,
+  freight_value,
   price,
-  quantity * price AS total_price
+  freight_value * price AS total_price
 FROM
-  order_items;
+  dbt_shop.order_items

@@ -4,5 +4,5 @@ SELECT
 FROM 
    `dbt_shop.order_items` 
 where 
-   date(shipping_limit_date)='{{ var("ingestion_date") }}' 
+   date(shipping_limit_date)='{{ var('ingestion_date') }}' 
 group by 1
